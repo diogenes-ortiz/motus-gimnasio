@@ -119,14 +119,19 @@
   /* ---------- Hero ---------- */
   .hero{
     position:relative; overflow:hidden;
-    padding:64px 0 56px;
+    padding:110px 0 96px;
     background:
-      radial-gradient(700px 420px at 85% -10%, rgba(224,33,40,.16), transparent 65%),
-      radial-gradient(520px 380px at -10% 110%, rgba(224,33,40,.08), transparent 60%),
-      var(--bg);
+      linear-gradient(90deg, rgba(10,10,10,.94) 0%, rgba(10,10,10,.78) 45%, rgba(10,10,10,.45) 100%),
+      url("img/entrenamiento-fuerza.jpg") center 30%/cover no-repeat;
   }
-  .hero-grid{ display:grid; gap:36px; align-items:center; }
-  @media (min-width:900px){ .hero-grid{ grid-template-columns:1.1fr .9fr; } }
+  @media (max-width:640px){
+    .hero{
+      padding:72px 0 64px;
+      background:
+        linear-gradient(rgba(10,10,10,.88), rgba(10,10,10,.88)),
+        url("img/entrenamiento-fuerza.jpg") center/cover no-repeat;
+    }
+  }
   .hero-kicker{
     display:inline-flex; align-items:center; gap:8px;
     background:var(--accent-soft); border:1px solid rgba(224,33,40,.45);
@@ -147,8 +152,6 @@
   .proof-item strong{ color:var(--text); font-size:1.05rem; }
   .proof-sep{ width:1px; height:26px; background:var(--line); display:none; }
   @media (min-width:640px){ .proof-sep{ display:block; } }
-  .hero-ph{ aspect-ratio:4/5; max-height:460px; width:100%; }
-  @media (max-width:899px){ .hero-ph{ aspect-ratio:16/10; max-height:260px; } }
 
   /* ---------- Secciones ---------- */
   section{ padding:72px 0; }
@@ -397,7 +400,7 @@
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="inicio">
-  <div class="wrap hero-grid">
+  <div class="wrap">
     <div>
       <span class="hero-kicker">Gimnasio · Punta del Este</span>
       <h1>Movete mejor.<br><em>Movimiento inteligente.</em></h1>
@@ -423,7 +426,6 @@
         <div class="proof-item"><span>Lun a vie · <strong>6:45–22:00</strong></span></div>
       </div>
     </div>
-    <img class="photo hero-ph" src="img/entrenamiento-fuerza.jpg" alt="Entrenamiento de fuerza con mancuernas en el gimnasio">
   </div>
 </section>
 
