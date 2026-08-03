@@ -275,6 +275,9 @@
   }
   .ph svg{ opacity:.5; }
   .ph span{ font-size:.8rem; max-width:22ch; }
+  .photo{ width:100%; height:100%; object-fit:cover; border-radius:var(--radius); display:block; }
+  .gallery .photo{ aspect-ratio:4/3; }
+  .clase .photo{ border-radius:0; aspect-ratio:16/9; border-bottom:1.5px solid var(--line); }
   .exp-card{ position:relative; }
   .exp-card figcaption{
     margin-top:10px; font-weight:700; font-size:.95rem; text-align:center;
@@ -420,10 +423,7 @@
         <div class="proof-item"><span>Lun a vie · <strong>6:45–22:00</strong></span></div>
       </div>
     </div>
-    <div class="ph hero-ph" role="img" aria-label="Foto pendiente: entrenamiento en Motus">
-      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
-      <span>Foto principal: entrenamiento en Motus</span>
-    </div>
+    <img class="photo hero-ph" src="img/entrenamiento-fuerza.jpg" alt="Entrenamiento de fuerza con mancuernas en el gimnasio">
   </div>
 </section>
 
@@ -502,10 +502,7 @@
     </div>
     <div class="grid grid-3">
       <div class="card clase">
-        <div class="ph" role="img" aria-label="Foto pendiente: entrenamiento de fuerza y movilidad">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
-          <span>Foto: fuerza y movilidad</span>
-        </div>
+        <img class="photo" src="img/equipamiento.jpg" alt="Kettlebells y equipamiento de entrenamiento funcional">
         <div class="clase-body">
           <h3>Fuerza + Movilidad</h3>
           <div class="clase-tags">
@@ -517,10 +514,7 @@
         </div>
       </div>
       <div class="card clase">
-        <div class="ph" role="img" aria-label="Foto pendiente: entrenamiento con seguimiento personalizado">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
-          <span>Foto: entrenamiento guiado</span>
-        </div>
+        <img class="photo" src="img/entrenamiento-guiado.jpg" alt="Entrenamiento en pareja con acompañamiento">
         <div class="clase-body">
           <h3>Entrenamiento Guiado</h3>
           <div class="clase-tags">
@@ -653,10 +647,7 @@
         <figcaption>Sala de entrenamiento</figcaption>
       </figure>
       <figure class="exp-card">
-        <div class="ph" role="img" aria-label="Foto pendiente: clase con seguimiento de un profe">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
-          <span>Foto: clase con profe</span>
-        </div>
+        <img class="photo" src="img/entrenamiento-guiado.jpg" alt="Dos personas entrenando juntas con acompañamiento">
         <figcaption>Seguimiento en cada clase</figcaption>
       </figure>
       <figure class="exp-card">
@@ -667,17 +658,11 @@
         <figcaption>Zona de movilidad</figcaption>
       </figure>
       <figure class="exp-card">
-        <div class="ph" role="img" aria-label="Foto pendiente: equipamiento del gimnasio">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
-          <span>Foto: equipamiento</span>
-        </div>
+        <img class="photo" src="img/equipamiento.jpg" alt="Rack de kettlebells y zona funcional">
         <figcaption>Equipamiento</figcaption>
       </figure>
       <figure class="exp-card">
-        <div class="ph" role="img" aria-label="Foto pendiente: entrenamiento de fuerza">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
-          <span>Foto: entrenamiento de fuerza</span>
-        </div>
+        <img class="photo" src="img/entrenamiento-fuerza.jpg" alt="Entrenamiento de fuerza con mancuernas">
         <figcaption>Zona de fuerza</figcaption>
       </figure>
       <figure class="exp-card">
@@ -853,8 +838,8 @@
       <strong>Propuesta conceptual desarrollada por GM Studio.</strong><br>
       Este sitio es una demostración de diseño y no constituye el sitio web oficial de Motus. Los datos de contacto,
       horarios y reseñas provienen de la ficha pública de Google del negocio (consulta: agosto 2026). Los nombres de
-      planes y fichas de entrenamientos son propuestas editables; las imágenes señaladas como pendientes deben
-      reemplazarse por material propio del gimnasio.
+      planes y fichas de entrenamientos son propuestas editables. Las fotografías actuales son de referencia y los
+      espacios señalados como pendientes deben completarse con material propio del gimnasio.
     </div>
   </div>
 </footer>
