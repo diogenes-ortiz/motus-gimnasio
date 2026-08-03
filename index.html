@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motus | Gimnasio en Punta del Este — Fuerza, movilidad y entrenamiento con seguimiento</title>
+<meta name="description" content="Motus es un gimnasio en Pernambuco, Punta del Este. Entrenamiento de fuerza y movilidad con seguimiento cercano. Calificación 4.9 en Google. Lunes a viernes de 6:45 a 22:00. Consultá por WhatsApp.">
+<meta property="og:title" content="Motus — Gimnasio en Punta del Este">
+<meta property="og:description" content="Entrenamiento de fuerza y movilidad con seguimiento cercano en Punta del Este. Calificación 4.9 en Google (39 reseñas).">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "Motus",
+  "telephone": "+598 98 028 161",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Pernambuco",
+    "addressLocality": "Punta del Este",
+    "addressRegion": "Departamento de Maldonado",
+    "postalCode": "20100",
+    "addressCountry": "UY"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "39"
+  },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "06:45", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "11:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/motusmovimientointeligente/"],
+  "hasMap": "https://maps.google.com/?cid=14347229854966856100"
+}
+</script>
+<style>
+  :root{
+    --bg: #0a0a0a;
+    --bg-soft: #111214;
+    --bg-card: #17181a;
+    --line: #292b2e;
+    --text: #f4f4f4;
+    --text-dim: #a8abae;
+    --accent: #e02128;
+    --accent-ink: #ffffff;
+    --accent-soft: rgba(224,33,40,.13);
+    --radius: 16px;
+    --maxw: 1120px;
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ scroll-behavior:smooth; scroll-padding-top:76px; }
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; }
+  .wrap{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 20px; }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background: rgba(10,10,10,.92);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px; gap:16px;
+  }
+  .brand{
+    font-weight:800; font-size:1.45rem; letter-spacing:-.02em;
+    text-decoration:none; display:flex; align-items:baseline;
+  }
+  .brand span{ color:var(--accent); }
+  .nav-links{ display:none; gap:24px; list-style:none; }
+  .nav-links a{
+    text-decoration:none; font-size:.92rem; color:var(--text-dim);
+    transition:color .2s;
+  }
+  .nav-links a:hover{ color:var(--text); }
+  .nav-cta{
+    text-decoration:none; background:var(--accent); color:var(--accent-ink);
+    font-weight:700; font-size:.88rem; padding:10px 18px; border-radius:999px;
+    white-space:nowrap; transition:transform .15s, box-shadow .2s;
+  }
+  .nav-cta:hover{ transform:translateY(-1px); box-shadow:0 6px 20px rgba(224,33,40,.35); }
+  @media (min-width:900px){ .nav-links{ display:flex; } }
+  .nav-right{ display:flex; align-items:center; gap:12px; }
+  .ig-link{
+    display:inline-flex; align-items:center; justify-content:center;
+    width:38px; height:38px; border-radius:50%;
+    border:1.5px solid var(--line); color:var(--text-dim);
+    transition:color .2s, border-color .2s;
+  }
+  .ig-link:hover{ color:var(--accent); border-color:var(--accent); }
+
+  /* ---------- Botones ---------- */
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:9px;
+    text-decoration:none; font-weight:700; font-size:1rem;
+    padding:15px 28px; border-radius:999px; border:none; cursor:pointer;
+    transition:transform .15s, box-shadow .2s, background .2s;
+  }
+  .btn-primary{ background:var(--accent); color:var(--accent-ink); }
+  .btn-primary:hover{ transform:translateY(-2px); box-shadow:0 8px 26px rgba(224,33,40,.45); }
+  .btn-ghost{
+    background:transparent; color:var(--text);
+    border:1.5px solid var(--line);
+  }
+  .btn-ghost:hover{ border-color:var(--accent); color:var(--accent); }
+  .btn svg{ flex-shrink:0; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    padding:64px 0 56px;
+    background:
+      radial-gradient(700px 420px at 85% -10%, rgba(224,33,40,.16), transparent 65%),
+      radial-gradient(520px 380px at -10% 110%, rgba(224,33,40,.08), transparent 60%),
+      var(--bg);
+  }
+  .hero-grid{ display:grid; gap:36px; align-items:center; }
+  @media (min-width:900px){ .hero-grid{ grid-template-columns:1.1fr .9fr; } }
+  .hero-kicker{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--accent-soft); border:1px solid rgba(224,33,40,.45);
+    color:var(--accent); font-size:.8rem; font-weight:600; letter-spacing:.06em;
+    text-transform:uppercase; padding:7px 14px; border-radius:999px; margin-bottom:22px;
+  }
+  .hero h1{
+    font-size:clamp(1.9rem, 7vw, 3.6rem);
+    line-height:1.06; font-weight:900; letter-spacing:-.01em;
+    text-transform:uppercase;
+  }
+  .hero h1 em{ font-style:normal; color:var(--accent); white-space:nowrap; }
+  .hero-sub{ margin-top:16px; font-size:1.05rem; color:var(--text-dim); max-width:46ch; }
+  .hero-ctas{ margin-top:28px; display:flex; flex-wrap:wrap; gap:14px; }
+  .hero-proof{ margin-top:32px; display:flex; flex-wrap:wrap; gap:12px 26px; align-items:center; }
+  .stars{ color:var(--accent); letter-spacing:2px; font-size:1rem; }
+  .proof-item{ display:flex; align-items:center; gap:9px; color:var(--text-dim); font-size:.92rem; }
+  .proof-item strong{ color:var(--text); font-size:1.05rem; }
+  .proof-sep{ width:1px; height:26px; background:var(--line); display:none; }
+  @media (min-width:640px){ .proof-sep{ display:block; } }
+  .hero-ph{ aspect-ratio:4/5; max-height:460px; width:100%; }
+  @media (max-width:899px){ .hero-ph{ aspect-ratio:16/10; max-height:260px; } }
+
+  /* ---------- Secciones ---------- */
+  section{ padding:72px 0; }
+  .section-alt{ background:var(--bg-soft); }
+  .sec-head{ margin-bottom:40px; }
+  .sec-head.center{ text-align:center; max-width:680px; margin-left:auto; margin-right:auto; }
+  h2{
+    font-size:clamp(1.7rem, 5vw, 2.6rem); line-height:1.1;
+    font-weight:900; letter-spacing:-.01em; text-transform:uppercase;
+  }
+  h2 span{ color:var(--accent); }
+  .sec-head p{ margin-top:14px; color:var(--text-dim); }
+  .sec-cta{ text-align:center; margin-top:36px; }
+
+  .grid{ display:grid; gap:18px; }
+  @media (min-width:700px){ .grid-3{ grid-template-columns:repeat(3,1fr); } .grid-2{ grid-template-columns:repeat(2,1fr); } }
+
+  .card{
+    background:var(--bg-card); border:1px solid var(--line);
+    border-radius:var(--radius); padding:26px;
+  }
+  .card h3{ font-size:1.12rem; font-weight:700; margin:14px 0 8px; }
+  .card p{ color:var(--text-dim); font-size:.95rem; }
+  .card-icon{
+    width:44px; height:44px; border-radius:12px;
+    background:var(--accent-soft); border:1px solid rgba(224,33,40,.35);
+    display:flex; align-items:center; justify-content:center; color:var(--accent);
+  }
+
+  /* ---------- Planes ---------- */
+  .plan-note{ font-size:.8rem; color:var(--text-dim); margin-top:22px; text-align:center; }
+  .plan{
+    display:flex; flex-direction:column; padding:0; overflow:hidden; position:relative;
+  }
+  .plan-badge{
+    position:absolute; top:14px; right:14px;
+    background:var(--accent); color:var(--accent-ink);
+    font-size:.7rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+    padding:5px 12px; border-radius:999px;
+  }
+  .plan-head{ padding:26px 26px 0; }
+  .plan-head h3{ font-size:1.35rem; font-weight:900; text-transform:uppercase; margin:0; }
+  .plan-head h3 span{ color:var(--accent); }
+  .plan-head p{ color:var(--text-dim); font-size:.9rem; margin-top:6px; }
+  .plan-price{ padding:18px 26px 0; }
+  .plan-price small{ display:block; font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:var(--text-dim); }
+  .plan-price b{ font-size:1.6rem; font-weight:900; color:var(--accent); }
+  .plan-price em{ font-style:normal; font-size:.8rem; color:var(--text-dim); display:block; }
+  .plan ul{ list-style:none; padding:18px 26px; flex:1; }
+  .plan li{
+    display:flex; gap:10px; align-items:flex-start;
+    font-size:.9rem; color:var(--text-dim); padding:7px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .plan li:last-child{ border-bottom:none; }
+  .plan li::before{
+    content:"✓"; color:var(--accent); font-weight:800; flex-shrink:0;
+  }
+  .plan .btn{ margin:0 26px 26px; }
+  .plan.featured{ border-color:var(--accent); box-shadow:0 0 0 1px var(--accent), 0 12px 40px rgba(224,33,40,.2); }
+
+  /* ---------- Clases ---------- */
+  .clase{ padding:0; overflow:hidden; display:flex; flex-direction:column; }
+  .clase .ph{ border-radius:0; border:none; border-bottom:1.5px dashed var(--line); aspect-ratio:16/9; }
+  .clase-body{ padding:20px 22px 24px; display:flex; flex-direction:column; flex:1; }
+  .clase-body h3{ margin:0 0 10px; font-size:1.15rem; font-weight:800; text-transform:uppercase; }
+  .clase-tags{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px; }
+  .tag{
+    font-size:.72rem; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+    background:var(--accent-soft); border:1px solid rgba(224,33,40,.35); color:var(--accent);
+    padding:4px 10px; border-radius:999px;
+  }
+  .clase-body p{ color:var(--text-dim); font-size:.9rem; flex:1; }
+  .clase-body a{ margin-top:14px; color:var(--accent); text-decoration:none; font-weight:700; font-size:.88rem; }
+
+  /* ---------- Grilla horarios ---------- */
+  .sched-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius:var(--radius); }
+  .sched{ width:100%; min-width:640px; border-collapse:collapse; font-size:.88rem; background:var(--bg-card); }
+  .sched th, .sched td{ padding:13px 14px; text-align:center; border-bottom:1px solid var(--line); border-right:1px solid var(--line); }
+  .sched th:last-child, .sched td:last-child{ border-right:none; }
+  .sched tr:last-child td{ border-bottom:none; }
+  .sched thead th{
+    background:var(--bg-soft); font-size:.75rem; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--text-dim); font-weight:700;
+  }
+  .sched td:first-child{
+    text-align:left; font-weight:700; font-size:.8rem; text-transform:uppercase;
+    letter-spacing:.06em; color:var(--text-dim); background:var(--bg-soft); white-space:nowrap;
+  }
+  .slot-open{ color:var(--accent); font-weight:700; }
+  .slot-closed{ color:#5d6a67; }
+  .sched-note{ margin-top:16px; font-size:.82rem; color:var(--text-dim); }
+
+  /* ---------- Reseñas ---------- */
+  .review-badge{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--bg-card); border:1px solid var(--line);
+    border-radius:999px; padding:9px 18px; margin-bottom:34px; font-size:.92rem;
+  }
+  .review-badge b{ font-size:1.05rem; }
+  .review-card{ display:flex; flex-direction:column; }
+  .review-card blockquote{ font-size:.96rem; color:var(--text); flex:1; }
+  .review-meta{ margin-top:16px; display:flex; align-items:center; gap:10px; }
+  .avatar{
+    width:38px; height:38px; border-radius:50%;
+    background:var(--accent-soft); border:1px solid rgba(224,33,40,.45);
+    color:var(--accent); font-weight:700; font-size:.9rem;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .review-meta small{ display:block; color:var(--text-dim); font-size:.78rem; }
+  .review-note{ margin-top:22px; color:var(--text-dim); font-size:.85rem; }
+
+  /* ---------- Galería / Experiencia ---------- */
+  .gallery{ display:grid; gap:14px; grid-template-columns:repeat(2,1fr); }
+  @media (min-width:700px){ .gallery{ grid-template-columns:repeat(3,1fr); } }
+  .ph{
+    aspect-ratio:4/3; border-radius:var(--radius);
+    border:1.5px dashed var(--line);
+    background:
+      repeating-linear-gradient(45deg, transparent, transparent 14px, rgba(255,255,255,.02) 14px, rgba(255,255,255,.02) 28px),
+      var(--bg-card);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:8px; text-align:center; padding:14px; color:var(--text-dim);
+  }
+  .ph svg{ opacity:.5; }
+  .ph span{ font-size:.8rem; max-width:22ch; }
+  .exp-card{ position:relative; }
+  .exp-card figcaption{
+    margin-top:10px; font-weight:700; font-size:.95rem; text-align:center;
+  }
+
+  /* ---------- Ubicación ---------- */
+  .loc-grid{ display:grid; gap:18px; }
+  @media (min-width:860px){ .loc-grid{ grid-template-columns:1.1fr .9fr; } }
+  .loc-line{ display:flex; gap:12px; align-items:flex-start; padding:13px 0; border-bottom:1px solid var(--line); }
+  .loc-line:last-child{ border-bottom:none; }
+  .loc-line svg{ flex-shrink:0; color:var(--accent); margin-top:3px; }
+  .loc-line a{ color:var(--text); text-decoration:none; }
+  .loc-line a:hover{ color:var(--accent); }
+  .loc-line small{ display:block; color:var(--text-dim); font-size:.8rem; margin-bottom:2px; text-transform:uppercase; letter-spacing:.08em; }
+  .hours{ width:100%; border-collapse:collapse; font-size:.94rem; }
+  .hours td{ padding:11px 0; border-bottom:1px solid var(--line); }
+  .hours tr:last-child td{ border-bottom:none; }
+  .hours td:last-child{ text-align:right; color:var(--text-dim); }
+  .hours .today td{ color:var(--accent); font-weight:700; }
+  .hours .closed td:last-child{ color:#e08b8b; }
+
+  /* ---------- FAQ ---------- */
+  details{
+    background:var(--bg-card); border:1px solid var(--line);
+    border-radius:var(--radius); margin-bottom:12px; overflow:hidden;
+  }
+  summary{
+    cursor:pointer; padding:19px 22px; font-weight:700; font-size:.98rem;
+    list-style:none; display:flex; justify-content:space-between; align-items:center; gap:14px;
+  }
+  summary::-webkit-details-marker{ display:none; }
+  summary::after{
+    content:"+"; color:var(--accent); font-size:1.4rem; font-weight:400; line-height:1;
+    transition:transform .2s; flex-shrink:0;
+  }
+  details[open] summary::after{ transform:rotate(45deg); }
+  details p{ padding:0 22px 20px; color:var(--text-dim); font-size:.94rem; }
+
+  /* ---------- Contacto ---------- */
+  .contact-grid{ display:grid; gap:24px; }
+  @media (min-width:860px){ .contact-grid{ grid-template-columns:1fr 1fr; gap:40px; } }
+  form label{ display:block; font-size:.86rem; font-weight:600; margin:16px 0 6px; }
+  form input, form textarea{
+    width:100%; background:var(--bg); border:1.5px solid var(--line);
+    border-radius:12px; padding:13px 15px; color:var(--text);
+    font-size:.95rem; font-family:inherit; transition:border-color .2s;
+  }
+  form input:focus, form textarea:focus{ outline:none; border-color:var(--accent); }
+  form textarea{ resize:vertical; min-height:96px; }
+  .form-note{ margin-top:12px; font-size:.8rem; color:var(--text-dim); }
+  form .btn{ margin-top:20px; width:100%; }
+  @media (min-width:860px){ form .btn{ width:auto; } }
+
+  /* ---------- CTA band ---------- */
+  .cta-band{
+    background:linear-gradient(120deg, rgba(224,33,40,.2), rgba(224,33,40,.06));
+    border:1px solid rgba(224,33,40,.45);
+    border-radius:22px; padding:40px 28px; text-align:center;
+  }
+  .cta-band h2{ margin-bottom:10px; }
+  .cta-band p{ color:var(--text-dim); max-width:46ch; margin:0 auto 26px; }
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line); padding:48px 0 110px; background:var(--bg-soft);
+  }
+  .foot-grid{ display:grid; gap:28px; }
+  @media (min-width:700px){ .foot-grid{ grid-template-columns:1.4fr 1fr 1fr; } }
+  footer h4{ font-size:.82rem; text-transform:uppercase; letter-spacing:.1em; color:var(--text-dim); margin-bottom:14px; }
+  footer ul{ list-style:none; }
+  footer li{ margin-bottom:9px; }
+  footer a{ text-decoration:none; color:var(--text-dim); font-size:.92rem; transition:color .2s; }
+  footer a:hover{ color:var(--accent); }
+  .foot-brand{ font-weight:800; font-size:1.3rem; margin-bottom:10px; }
+  .foot-brand span{ color:var(--accent); }
+  .foot-desc{ color:var(--text-dim); font-size:.92rem; max-width:34ch; }
+  .foot-legal{
+    margin-top:40px; padding-top:22px; border-top:1px solid var(--line);
+    color:var(--text-dim); font-size:.8rem; line-height:1.7;
+  }
+  .foot-legal strong{ color:var(--text); }
+
+  /* ---------- WhatsApp flotante ---------- */
+  .wa-float{
+    position:fixed; right:18px; bottom:18px; z-index:60;
+    width:58px; height:58px; border-radius:50%;
+    background:#25d366; color:#fff;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 24px rgba(0,0,0,.4);
+    transition:transform .15s;
+  }
+  .wa-float:hover{ transform:scale(1.07); }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio">mo<span>tus.</span></a>
+    <ul class="nav-links">
+      <li><a href="#planes">Planes</a></li>
+      <li><a href="#clases">Clases</a></li>
+      <li><a href="#horarios">Horarios</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#faq">Preguntas</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="ig-link" href="https://www.instagram.com/motusmovimientointeligente/" target="_blank" rel="noopener" aria-label="Instagram de Motus">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a class="nav-cta" href="#contacto">¡Empezá ya!</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hero-kicker">Gimnasio · Punta del Este</span>
+      <h1>Movete mejor.<br><em>Movimiento inteligente.</em></h1>
+      <p class="hero-sub">
+        <strong style="color:var(--text)">Entrenamos para la vida real.</strong>
+        Fuerza + movilidad con profes que siguen tu proceso. En Pernambuco, Punta del Este.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#planes">¡Empezá ya!</a>
+        <a class="btn btn-ghost" href="https://wa.me/59898028161?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Motus" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2a.5.5 0 0 0 0-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 5 5 0 0 0 3 .9 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+      <div class="hero-proof">
+        <div class="proof-item">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <span><strong>4.9</strong> / 5 en Google</span>
+        </div>
+        <div class="proof-sep"></div>
+        <div class="proof-item"><span><strong>39</strong> calificaciones</span></div>
+        <div class="proof-sep"></div>
+        <div class="proof-item"><span>Lun a vie · <strong>6:45–22:00</strong></span></div>
+      </div>
+    </div>
+    <div class="ph hero-ph" role="img" aria-label="Foto pendiente: entrenamiento en Motus">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
+      <span>Foto principal: entrenamiento en Motus</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PLANES ================= -->
+<section id="planes" class="section-alt">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2>Elegí <span>tu plan</span></h2>
+      <p>Estructura de ejemplo — Motus define nombres, precios y condiciones. <em>[Sección editable]</em></p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card plan">
+        <div class="plan-head">
+          <h3>Plan <span>Inicio</span></h3>
+          <p>Para arrancar a moverte con acompañamiento.</p>
+        </div>
+        <div class="plan-price">
+          <small>Precio</small>
+          <b>Consultá</b>
+          <em>por WhatsApp, sin compromiso</em>
+        </div>
+        <ul>
+          <li>Entrenamiento de fuerza y movilidad</li>
+          <li>Profes atentos a tu punto de partida</li>
+          <li>Horario amplio: lun a vie 6:45–22:00</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/59898028161?text=Hola%2C%20quiero%20info%20del%20plan%20de%20inicio" target="_blank" rel="noopener">Quiero este plan</a>
+      </div>
+      <div class="card plan featured">
+        <span class="plan-badge">Más completo</span>
+        <div class="plan-head">
+          <h3>Plan <span>Seguimiento</span></h3>
+          <p>Entrenamiento guiado según tu objetivo.</p>
+        </div>
+        <div class="plan-price">
+          <small>Precio</small>
+          <b>Consultá</b>
+          <em>por WhatsApp, sin compromiso</em>
+        </div>
+        <ul>
+          <li>Plan armado desde tu objetivo personal</li>
+          <li>Seguimiento de tu proceso, clase a clase</li>
+          <li>Fuerza + movilidad adaptadas a vos</li>
+          <li>Horario amplio: lun a vie 6:45–22:00</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/59898028161?text=Hola%2C%20quiero%20info%20del%20plan%20con%20seguimiento" target="_blank" rel="noopener">Quiero este plan</a>
+      </div>
+      <div class="card plan">
+        <div class="plan-head">
+          <h3>Plan <span>Deportivo</span></h3>
+          <p>Preparación física para tu deporte.</p>
+        </div>
+        <div class="plan-price">
+          <small>Precio</small>
+          <b>Consultá</b>
+          <em>por WhatsApp, sin compromiso</em>
+        </div>
+        <ul>
+          <li>Fuerza y movilidad específicas (ej.: surf)</li>
+          <li>Trabajo orientado a tu rendimiento</li>
+          <li>Profes que entienden tu deporte</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/59898028161?text=Hola%2C%20quiero%20info%20de%20preparaci%C3%B3n%20deportiva" target="_blank" rel="noopener">Quiero este plan</a>
+      </div>
+    </div>
+    <p class="plan-note">* Los nombres de planes son una propuesta de GM Studio. Precios y condiciones se consultan directamente con Motus.</p>
+  </div>
+</section>
+
+<!-- ================= CLASES ================= -->
+<section id="clases">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2>Conocé nuestros <span>entrenamientos</span></h2>
+      <p>Modalidades basadas en lo que cuentan los alumnos. <em>[Fichas editables con la grilla oficial de Motus]</em></p>
+    </div>
+    <div class="grid grid-3">
+      <div class="card clase">
+        <div class="ph" role="img" aria-label="Foto pendiente: entrenamiento de fuerza y movilidad">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
+          <span>Foto: fuerza y movilidad</span>
+        </div>
+        <div class="clase-body">
+          <h3>Fuerza + Movilidad</h3>
+          <div class="clase-tags">
+            <span class="tag">Duración: [editar]</span>
+            <span class="tag">Todos los niveles</span>
+          </div>
+          <p>Fuerza funcional y trabajo de movilidad para estar mejor con tu cuerpo, adaptado a tu punto de partida.</p>
+          <a href="https://wa.me/59898028161?text=Hola%2C%20quiero%20info%20de%20fuerza%20y%20movilidad" target="_blank" rel="noopener">Consultar horarios →</a>
+        </div>
+      </div>
+      <div class="card clase">
+        <div class="ph" role="img" aria-label="Foto pendiente: entrenamiento con seguimiento personalizado">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
+          <span>Foto: entrenamiento guiado</span>
+        </div>
+        <div class="clase-body">
+          <h3>Entrenamiento Guiado</h3>
+          <div class="clase-tags">
+            <span class="tag">Duración: [editar]</span>
+            <span class="tag">Personalizado</span>
+          </div>
+          <p>Los profes siguen tu proceso y ajustan el trabajo a tu capacidad y tu objetivo. No entrenás solo.</p>
+          <a href="https://wa.me/59898028161?text=Hola%2C%20quiero%20info%20de%20entrenamiento%20guiado" target="_blank" rel="noopener">Consultar horarios →</a>
+        </div>
+      </div>
+      <div class="card clase">
+        <div class="ph" role="img" aria-label="Foto pendiente: preparación deportiva">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
+          <span>Foto: preparación deportiva</span>
+        </div>
+        <div class="clase-body">
+          <h3>Preparación Deportiva</h3>
+          <div class="clase-tags">
+            <span class="tag">Duración: [editar]</span>
+            <span class="tag">Surf y más</span>
+          </div>
+          <p>Fuerza y movilidad específicas para rendir mejor en tu deporte. Hay alumnos que entrenan orientados al surf.</p>
+          <a href="https://wa.me/59898028161?text=Hola%2C%20quiero%20info%20de%20preparaci%C3%B3n%20deportiva" target="_blank" rel="noopener">Consultar horarios →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HORARIOS ================= -->
+<section id="horarios" class="section-alt">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2>Grilla de <span>horarios</span></h2>
+      <p>El gimnasio abre de lunes a viernes de 6:45 a 22:00 y sábados de 8:00 a 11:00.</p>
+    </div>
+    <div class="sched-wrap">
+      <table class="sched">
+        <thead>
+          <tr>
+            <th>Turno</th><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th><th>Dom</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mañana<br>6:45–12:00</td>
+            <td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td>
+            <td class="slot-open">8–11</td><td class="slot-closed">—</td>
+          </tr>
+          <tr>
+            <td>Mediodía<br>12:00–16:00</td>
+            <td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td>
+            <td class="slot-closed">—</td><td class="slot-closed">—</td>
+          </tr>
+          <tr>
+            <td>Tarde<br>16:00–19:00</td>
+            <td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td>
+            <td class="slot-closed">—</td><td class="slot-closed">—</td>
+          </tr>
+          <tr>
+            <td>Noche<br>19:00–22:00</td>
+            <td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td><td class="slot-open">Abierto</td>
+            <td class="slot-closed">—</td><td class="slot-closed">—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="sched-note">Grilla de clases por horario: <em>[a completar cuando Motus confirme su calendario de clases]</em>. Consultá disponibilidad por <a href="https://wa.me/59898028161" target="_blank" rel="noopener" style="color:var(--accent)">WhatsApp</a>.</p>
+    <div class="sec-cta">
+      <a class="btn btn-primary" href="#contacto">Reservar mi lugar</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= RESEÑAS ================= -->
+<section id="resenas">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2>4.9 estrellas <span>hablan por nosotros</span></h2>
+    </div>
+    <div style="text-align:center">
+      <div class="review-badge">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span><b>4.9</b> sobre 5 · 39 calificaciones en Google</span>
+      </div>
+    </div>
+    <div class="grid grid-3">
+      <div class="card review-card">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <blockquote>“El training que realizo con el profe Renzo, la verdad que un espectáculo: todo movilidad, fuerza enfocado para estar mejor con tu cuerpo si te metés a surfear.”</blockquote>
+        <div class="review-meta">
+          <div class="avatar">LD</div>
+          <div><span>Lucas Diaz</span><small>Reseña de Google · hace 2 meses</small></div>
+        </div>
+      </div>
+      <div class="card review-card">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <blockquote>“Los pibes son cracks, saben un montón y prestan atención tanto a las capacidades individuales como a los objetivos personales.”</blockquote>
+        <div class="review-meta">
+          <div class="avatar">SM</div>
+          <div><span>Sergio Montagner</span><small>Reseña de Google</small></div>
+        </div>
+      </div>
+      <div class="card review-card">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <blockquote>“Buena onda, mucha energía y excelentes profesionales que están pendientes en todo momento de tu proceso.”</blockquote>
+        <div class="review-meta">
+          <div class="avatar">MG</div>
+          <div><span>Maricel Gasanol</span><small>Reseña de Google · hace un año</small></div>
+        </div>
+      </div>
+    </div>
+    <p class="review-note" style="text-align:center">Reseñas publicadas en la ficha de Google de Motus. <a href="https://maps.google.com/?cid=14347229854966856100" target="_blank" rel="noopener" style="color:var(--accent)">Ver todas en Google Maps →</a></p>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCIA / GALERÍA ================= -->
+<section id="galeria" class="section-alt">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2>Viví la experiencia <span>Motus</span></h2>
+      <p><em>[Reemplazar con fotos reales de Motus o de su Instagram]</em></p>
+    </div>
+    <div class="gallery">
+      <figure class="exp-card">
+        <div class="ph" role="img" aria-label="Foto pendiente: sala principal de entrenamiento">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
+          <span>Foto: sala principal</span>
+        </div>
+        <figcaption>Sala de entrenamiento</figcaption>
+      </figure>
+      <figure class="exp-card">
+        <div class="ph" role="img" aria-label="Foto pendiente: clase con seguimiento de un profe">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
+          <span>Foto: clase con profe</span>
+        </div>
+        <figcaption>Seguimiento en cada clase</figcaption>
+      </figure>
+      <figure class="exp-card">
+        <div class="ph" role="img" aria-label="Foto pendiente: trabajo de movilidad">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
+          <span>Foto: trabajo de movilidad</span>
+        </div>
+        <figcaption>Zona de movilidad</figcaption>
+      </figure>
+      <figure class="exp-card">
+        <div class="ph" role="img" aria-label="Foto pendiente: equipamiento del gimnasio">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
+          <span>Foto: equipamiento</span>
+        </div>
+        <figcaption>Equipamiento</figcaption>
+      </figure>
+      <figure class="exp-card">
+        <div class="ph" role="img" aria-label="Foto pendiente: entrenamiento de fuerza">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
+          <span>Foto: entrenamiento de fuerza</span>
+        </div>
+        <figcaption>Zona de fuerza</figcaption>
+      </figure>
+      <figure class="exp-card">
+        <div class="ph" role="img" aria-label="Foto pendiente: equipo de profes de Motus">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m4 19 6-6 4 4 3-3 3 3"/></svg>
+          <span>Foto: equipo de profes</span>
+        </div>
+        <figcaption>El equipo</figcaption>
+      </figure>
+    </div>
+    <div class="sec-cta">
+      <a class="btn btn-primary" href="#contacto">¡Empezá ya!</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= UBICACIÓN ================= -->
+<section id="ubicacion">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2>Encontranos en <span>Punta del Este</span></h2>
+    </div>
+    <div class="loc-grid">
+      <div class="card">
+        <div class="loc-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div>
+            <small>Dirección</small>
+            <a href="https://maps.google.com/?cid=14347229854966856100" target="_blank" rel="noopener">Pernambuco, 20100 Punta del Este, Maldonado, Uruguay</a>
+          </div>
+        </div>
+        <div class="loc-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+          <div>
+            <small>Teléfono / WhatsApp</small>
+            <a href="tel:+59898028161">+598 98 028 161</a>
+          </div>
+        </div>
+        <div class="loc-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          <div>
+            <small>Instagram</small>
+            <a href="https://www.instagram.com/motusmovimientointeligente/" target="_blank" rel="noopener">@motusmovimientointeligente</a>
+          </div>
+        </div>
+        <div class="loc-line">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18l-6 2V6l6-2 6 2 6-2v14l-6 2-6-2Z"/><path d="M9 4v14M15 6v14"/></svg>
+          <div>
+            <small>Cómo llegar</small>
+            <a href="https://maps.google.com/?cid=14347229854966856100" target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <h3 style="margin-top:0">Horario del gimnasio</h3>
+        <table class="hours">
+          <tr><td>Lunes</td><td>6:45 – 22:00</td></tr>
+          <tr><td>Martes</td><td>6:45 – 22:00</td></tr>
+          <tr><td>Miércoles</td><td>6:45 – 22:00</td></tr>
+          <tr><td>Jueves</td><td>6:45 – 22:00</td></tr>
+          <tr><td>Viernes</td><td>6:45 – 22:00</td></tr>
+          <tr><td>Sábado</td><td>8:00 – 11:00</td></tr>
+          <tr class="closed"><td>Domingo</td><td>Cerrado</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="section-alt">
+  <div class="wrap">
+    <div class="sec-head center">
+      <h2>Preguntas <span>frecuentes</span></h2>
+    </div>
+    <details>
+      <summary>¿Dónde queda Motus?</summary>
+      <p>En Pernambuco, Punta del Este (Departamento de Maldonado, Uruguay). Podés ver la ubicación exacta en la <a href="https://maps.google.com/?cid=14347229854966856100" target="_blank" rel="noopener" style="color:var(--accent)">ficha de Google Maps</a>.</p>
+    </details>
+    <details>
+      <summary>¿Qué horarios tiene?</summary>
+      <p>De lunes a viernes de 6:45 a 22:00 y sábados de 8:00 a 11:00. Domingos cerrado.</p>
+    </details>
+    <details>
+      <summary>¿Necesito experiencia previa para entrenar?</summary>
+      <p>No hace falta: los profes adaptan el trabajo a tu punto de partida. Consultá tu caso por WhatsApp. <em>[Respuesta editable por Motus]</em></p>
+    </details>
+    <details>
+      <summary>¿Puedo entrenar para un deporte específico, como surf?</summary>
+      <p>Sí, hay alumnos que entrenan orientados al surf. Consultá por tu deporte. <em>[Respuesta editable por Motus]</em></p>
+    </details>
+    <details>
+      <summary>¿Cuánto cuesta y qué planes hay?</summary>
+      <p>Los planes y precios se consultan directamente por WhatsApp al <a href="https://wa.me/59898028161" target="_blank" rel="noopener" style="color:var(--accent)">+598 98 028 161</a>. <em>[Sección editable si Motus quiere publicar sus planes]</em></p>
+    </details>
+    <details>
+      <summary>¿Cómo empiezo?</summary>
+      <p>Escribí por WhatsApp o dejá tu consulta en el formulario. Te orientan según tu objetivo y horarios.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ================= CTA BAND ================= -->
+<section style="padding-top:0" class="section-alt">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Tu primer entrenamiento está <span>a un mensaje</span></h2>
+      <p>Contanos tu objetivo y arrancá esta semana.</p>
+      <a class="btn btn-primary" href="#contacto">¡Empezá ya!</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACTO ================= -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <h2>Solicitá <span>información</span></h2>
+        <p style="margin-top:14px; color:var(--text-dim)">
+          Respondemos por WhatsApp: <a href="https://wa.me/59898028161" target="_blank" rel="noopener" style="color:var(--accent)">+598 98 028 161</a>.
+          Mirá el día a día en <a href="https://www.instagram.com/motusmovimientointeligente/" target="_blank" rel="noopener" style="color:var(--accent)">Instagram</a>.
+        </p>
+      </div>
+      <form id="form-contacto">
+        <label for="f-nombre">Nombre</label>
+        <input id="f-nombre" name="nombre" type="text" placeholder="Tu nombre" required>
+        <label for="f-objetivo">¿Qué estás buscando?</label>
+        <textarea id="f-objetivo" name="objetivo" placeholder="Ej.: quiero empezar a entrenar fuerza, entreno para surf, busco horarios de mañana…" required></textarea>
+        <button class="btn btn-primary" type="submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2a.5.5 0 0 0 0-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 5 5 0 0 0 3 .9 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>
+          Enviar consulta por WhatsApp
+        </button>
+        <p class="form-note">Al enviar se abre WhatsApp con tu mensaje ya redactado. No guardamos tus datos en este sitio.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">mo<span>tus.</span></div>
+        <p class="foot-desc">Gimnasio en Punta del Este. Fuerza, movilidad y entrenamiento con seguimiento cercano.</p>
+        <a class="ig-link" style="margin-top:16px" href="https://www.instagram.com/motusmovimientointeligente/" target="_blank" rel="noopener" aria-label="Instagram de Motus">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+      <div>
+        <h4>Secciones</h4>
+        <ul>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#clases">Clases</a></li>
+          <li><a href="#horarios">Horarios</a></li>
+          <li><a href="#resenas">Reseñas</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Datos</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?cid=14347229854966856100" target="_blank" rel="noopener">Pernambuco, 20100 Punta del Este</a></li>
+          <li><a href="tel:+59898028161">+598 98 028 161</a></li>
+          <li><a href="https://www.instagram.com/motusmovimientointeligente/" target="_blank" rel="noopener">@motusmovimientointeligente</a></li>
+          <li>Lun–Vie 6:45–22:00 · Sáb 8:00–11:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-legal">
+      <strong>Propuesta conceptual desarrollada por GM Studio.</strong><br>
+      Este sitio es una demostración de diseño y no constituye el sitio web oficial de Motus. Los datos de contacto,
+      horarios y reseñas provienen de la ficha pública de Google del negocio (consulta: agosto 2026). Los nombres de
+      planes y fichas de entrenamientos son propuestas editables; las imágenes señaladas como pendientes deben
+      reemplazarse por material propio del gimnasio.
+    </div>
+  </div>
+</footer>
+
+<!-- ================= WHATSAPP FLOTANTE ================= -->
+<a class="wa-float" href="https://wa.me/59898028161?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Motus" target="_blank" rel="noopener" aria-label="Contactar a Motus por WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.6-1.2a.5.5 0 0 0 0-.5c0-.1-.6-1.4-.8-1.9s-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.1 5 5 0 0 0 1 2.7 11.4 11.4 0 0 0 4.4 3.9 5 5 0 0 0 3 .9 2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.5-.3Z"/></svg>
+</a>
+
+<script>
+  // El formulario redirige a WhatsApp con el mensaje prellenado (sin backend).
+  document.getElementById('form-contacto').addEventListener('submit', function(e){
+    e.preventDefault();
+    var nombre = document.getElementById('f-nombre').value.trim();
+    var objetivo = document.getElementById('f-objetivo').value.trim();
+    var msg = 'Hola, soy ' + nombre + '. Quiero información sobre Motus. ' + objetivo;
+    window.open('https://wa.me/59898028161?text=' + encodeURIComponent(msg), '_blank');
+  });
+
+  // Resalta el día actual en la tabla de horarios.
+  (function(){
+    var rows = document.querySelectorAll('.hours tr');
+    var day = new Date().getDay(); // 0 = domingo
+    var idx = (day === 0) ? 6 : day - 1;
+    if (rows[idx]) rows[idx].classList.add('today');
+  })();
+</script>
+
+</body>
+</html>
